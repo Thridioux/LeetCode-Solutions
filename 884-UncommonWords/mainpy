@@ -1,0 +1,33 @@
+class Solution(object):
+    def uncommonFromSentences(self, s1, s2):
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: List[str]
+        """
+        from collections import Counter
+        #combine the words from both strings
+        words = s1.split() + s2.split()
+        word_count = Counter(words)
+        #return the words that appear only once
+        uncommon_list =[]
+        for word,count in word_count.items():
+            if count == 1:
+                uncommon_list.append(word)
+                
+        return uncommon_list
+    
+        
+        
+
+                
+                
+        
+#test 
+sol = Solution()
+print(sol.uncommonFromSentences("this apple is sweet", "this apple is sour"))
+
+
+        
+    
+                
