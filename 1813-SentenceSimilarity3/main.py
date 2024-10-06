@@ -8,7 +8,7 @@ class Solution(object):
         s1 = sentence1.split(" ")
         s2 = sentence2.split(" ")
 
-        if len(s1) < len(s2):
+        if len(s2) < len(s1):
             s1, s2 = s2, s1
 
         # s1 should be prefix ,suffix or combination of prefix and suffix of s2
