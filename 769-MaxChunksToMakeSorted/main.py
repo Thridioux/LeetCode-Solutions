@@ -1,5 +1,5 @@
 class Solution:
-    def maxChunksToSorted(self, arr: List[int]) -> int:
+    def maxChunksToSorted(self, arr) -> int:
         cur_max = -1
         res = 0
         
