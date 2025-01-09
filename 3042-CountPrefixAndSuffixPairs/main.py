@@ -1,5 +1,5 @@
 class Solution:
-    def countPrefixSuffixPairs(self, words: List[str]) -> int:
+    def countPrefixSuffixPairs(self, words):
         res = 0 
         
         for i in range(len(words)):
