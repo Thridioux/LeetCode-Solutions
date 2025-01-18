@@ -11,7 +11,4 @@ class Solution(object):
             if n:
                 last = ~last
             
-        return first == last
-    
-        
-        
+        return first == last    
