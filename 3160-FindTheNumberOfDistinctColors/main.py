@@ -1,18 +1,18 @@
 class Solution:
     def queryResults(self, limit, queries):
-        from collections import Counter
+        from collections import Counter,defaultdict
         N = limit + 1
         f = Counter()
-        color = [0] * N
+        colors = defaultdict(lambda: 0)
         
         ans = []
         for x, y in queries:
-            prev = color[x]
+            prev = colors[x]
             if prev != 0:
                 f[prev] -= 1
                 if f[prev] == 0:
                     del f[prev]
-            color[x] = y
+            colors[x] = y
             f[y] += 1
             ans.append(len(f))
             
