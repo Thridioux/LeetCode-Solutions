@@ -23,5 +23,10 @@ class Solution(object):
                 nr, nc = r + dr, c + dc
                 if not (0 <= nr < ROWS and 0 <= nc < COLS):
                     continue
-                time = max(times[r][c],moveTime[nr][nc]) + (r + c)
+                time = max(times[r][c],moveTime[nr][nc]) + (r + c) % 2 + 1
+                if time< times[nr][nc]:
+                    times[nr][nc] = time
+                    heappush(heap, (time, nr, nc))
+                    
+        return times[ROWS - 1][COLS - 1]
         
