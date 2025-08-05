@@ -7,6 +7,7 @@ class Solution:
             unset = 1
             for i in range(n):
                 if fruit <= baskets[i]:
+                    baskets[i] = 0
                     unset = 0
                     break
             count += unset
